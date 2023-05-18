@@ -76,7 +76,7 @@ $(document).ready(function() {
                 var selectedRow = tableData.find(function(data) {
                     return data.code === code;
                 });
-                textarea.val(textarea.val() + "Code: " + code + " -> Portion: " + (selectedRow ? selectedRow.selection.toFixed(2) : '') + ", Profit Per Weight: " + (selectedRow ? selectedRow.profitPerWeight.toFixed(2) : '')  + ", Total Price: " + row.totalPrice + "\n");
+                textarea.val(textarea.val() + "Code: " + code + " -> Portion: " + (selectedRow ? selectedRow.selection: '') + ", Profit Per Weight: " + (selectedRow ? selectedRow.profitPerWeight : '')  + ", Total Price: " + row.totalPrice + "\n");
             });
             textarea.val(textarea.val() + "\n");
             textarea.val(textarea.val() + "Total Price: " + totalPriceTotal.toFixed(2));
