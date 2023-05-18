@@ -1,6 +1,6 @@
 //variables
 const networkManager = new NetworkManager();
-const startNodeId = 1; // ID of the start node
+var startNodeId = 1; // ID of the start node
 var network = null;
 var networkNodes = null;
 var networkEdges = null;
@@ -111,8 +111,26 @@ async function node() {
     document.getElementById("highlightBtn").addEventListener("click", highlightEdges);
 }
 node();
-
 async function highlightEdges() {
+  // Ask the user where to start using a prompt based on node value
+  const startNodeLabel = prompt("Enter the label of the starting node:");
+
+  // Find the node ID based on the entered label
+  let startNode = null;
+  networkNodes.forEach(function(node) {
+    if (node.label === startNodeLabel) {
+      startNode = node;
+    }
+  });
+
+  if (!startNode) {
+    alert("Invalid starting node label!");
+    return;
+  }
+
+  // Set the starting node ID
+  startNodeId = startNode.id;
+
   const shortestPaths = dijkstraAlgorithm(network, startNodeId);
   var buildString = ``;
   // Print shortest paths
@@ -122,7 +140,7 @@ async function highlightEdges() {
     //print the result of dijkstra algorithm
     buildString += `Shortest path to node ${networkNodes.get(parseInt(node)).label}: ${shortestPaths[node].map(nodeId => networkNodes.get(parseInt(nodeId)).label).join(" -> ")}\n`;        
     document.getElementById("textarea").value = buildString;
-    document.getElementById("indicator").value = `Tracker: ${networkNodes.get(1).label} to ${networkNodes.get(parseInt(node)).label}`;
+    document.getElementById("indicator").value = `Tracker: ${startNode.label} to ${networkNodes.get(parseInt(node)).label}`;
     //
     // Find the edge ID with matching parentFrom and parentTo
     var edgeIdsToHighlight = [];
@@ -166,5 +184,5 @@ async function highlightEdges() {
     networkManager.edges.update(allEdges);
 
   }
-    networkManager.printData();
+  networkManager.printData();
 }
