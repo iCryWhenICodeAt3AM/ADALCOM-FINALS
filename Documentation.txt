@@ -1,0 +1,22 @@
+Types of Data Structures Used:
+1.Minimum Spanning Tree
+    1.1. Dynamic Data Structure: Objects, DisjointSet
+    -Objects: Represents the nodes and edges of the Graph    
+    -DisjointSet: Mainly used in Kruskal's Algorithm to keep track of the nodes connectivity
+    1.2. Non-Linear Data Structure: Graph Data Structure and Algorithm
+    -Application and Network Implementation using VIS.JS
+
+2.Shortest Path
+    2.1. Dynamic Data Structure: Objects, Maps, Sets
+    -Objects: Represents the nodes and edges of the Graph
+    -Maps: Implemented for node label identifier based on id
+    -Sets: Mainly used in the Dijkstra's Algorithm to save visited nodes
+    2.2. Non-Linear Data Structure: Graph Data Structure and Algorithm
+    -Application and Network Implementation using VIS.JS
+
+3.Tree Traversal
+    3.1 Dynamic Data Structure: Maps, Sets
+    -Maps: Used to represent the graph's adjacency list (node and its neighbors)
+    -Sets: Used to track visited nodes during hamiltonian path traversal (avoidance of visiting nodes twice)
+    3.2. Non-Linear Data Structure: Graph Data Structure and Algorithm
+    -Application and Network Implementation using VIS.JS

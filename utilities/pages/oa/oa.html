@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU-DRIVEN PROGRAM</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/master.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+        <!-- Brand logo -->
+        <a class="navbar-brand" href="index.html/../../../..">NO-MENU</a>
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navigation menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <!-- Menu items -->
+            <li class="nav-item">
+                <a class="nav-link" href="../msp/msp.html">Minimum Spanning Tree</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../tt/tt.html">Tree Traversal</a>    
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../sp/sp.html">Shortest Path</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Optimization Algorithms</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid pt-4">
+        <div class="row">
+            <div class="col-sm-3">
+                    <div class="mb-3">
+                      <h4>Knapsack Problem</h4>
+                      <h6>
+                            Optimization Algorithm<br>
+                            Using Greedy Algorithm
+                      </h6>
+                      <button class="btn btn-outline-light mt-1" id="highlightBtn">Perform Operation</button>
+                    </div>
+                    <div class="container mt-4 p-0">
+                      <label for="textarea">Log:</label>
+                      <textarea class="form-control mt-1" id="textarea" rows="17" disabled></textarea>
+                </div>
+                <!-- <div id="mini-monitor"></div> -->
+            </div>
+            <div class="col-sm-9">
+                <table id="dataTable" class="table">
+                    <thead>
+                      <tr>
+                        <th>Object Code</th>
+                        <th>Profit</th>
+                        <th>Weight</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="text" class="form-control object-code" required></td>
+                        <td><input type="number" class="form-control profit" required></td>
+                        <td><input type="number" class="form-control weight" required></td>
+                        <td>
+                            <button class="btn btn-primary btn-sm check-btn">Check</button>
+                            <button class="btn btn-danger btn-sm remove-row" disabled>Remove</button>
+                            <button class="btn btn-warning btn-sm edit-row" disabled>Edit</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        
+        <!-- <div id="mynetwork"></div> -->
+    </div>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="../../methods/oa/table.js"></script>
+    <script src="../../methods/oa/oa.js"></script>
+</body>
+</html>

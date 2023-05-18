@@ -1,0 +1,46 @@
+.navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ccc;
+    }
+.navbar{
+    background-color: rgba(15, 13, 14, 0.964);
+}
+body{
+    background-color: rgb(16, 14, 17);
+    color:white;
+}
+.list-group-item{
+  background-color: rgba(15, 13, 14, 0.964);
+  color: rgb(223, 223, 223);
+}
+#mynetwork{
+  width: 980px;
+  height: 600px;
+  position: absolute;
+  top: 11%;
+  left: 24%;
+}
+#textarea{
+  background-color: rgba(15, 13, 14, 0.964);
+  border-color:  rgba(46, 41, 44, 0.776);
+  color: white;
+}
+#indicator{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  background-color: rgba(15, 13, 14, 0.964);
+  border-color:  rgba(46, 41, 44, 0.776);
+  color: white;
+  font-size: 20px;
+}
+th{
+  color:white;
+  text-align: center;
+}
+.error {
+  background-color: #FFCCCC;
+}
