@@ -69,7 +69,7 @@ $(document).ready(function() {
 
             // Update the textarea with the results
             textarea.val(textarea.val() + "\n");
-            textarea.val(textarea.val() + "Weight Restriction: " + weightRestriction.toFixed(2) + "\n\n");
+            textarea.val(textarea.val() + "Weight Restriction: " + weightRestriction + "\n\n");
             textarea.val(textarea.val() + "Selection Cost:\n");
             totalPriceArray.forEach(function(row) {
                 var code = row.code;
