@@ -35,11 +35,11 @@
                     <a class="nav-link" href="../sp/sp.html">Shortest Path</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Optimization Algorithms</a>
+                    <a class="nav-link" href="../oa/oa.html">Optimization Algorithms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../pert/pert.html">PERT Chart</a>
-                </li>
+                    <a class="nav-link" href="#">PERT Chart</a>
+                  </li>
             </ul>
         </div>
         </div>
@@ -57,8 +57,23 @@
                       <button class="btn btn-outline-light mt-1" id="highlightBtn">Perform Operation</button>
                     </div>
                     <div class="container mt-4 p-0">
-                      <label for="textarea">Log:</label>
-                      <textarea class="form-control mt-1" id="textarea" rows="17" disabled></textarea>
+                      <table>
+                        <thead>
+                            <tr>
+                            <th>Code</th>
+                            <th>Pred</th>
+                            <th>ET</th>
+                            <th>ES</th>
+                            <th>EF</th>
+                            <th>LS</th>
+                            <th>LF</th>
+                            <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
                 </div>
                 <!-- <div id="mini-monitor"></div> -->
             </div>
@@ -66,17 +81,17 @@
                 <table id="dataTable" class="table">
                     <thead>
                       <tr>
-                        <th>Object Code</th>
-                        <th>Profit</th>
-                        <th>Weight</th>
+                        <th>Code</th>
+                        <th>Pred</th>
+                        <th>ET</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><input type="text" class="form-control object-code" required></td>
-                        <td><input type="number" class="form-control profit" required></td>
-                        <td><input type="number" class="form-control weight" required></td>
+                        <td><input type="text" class="form-control code" required></td>
+                        <td><input type="text" class="form-control pred" required></td>
+                        <td><input type="number" class="form-control et" required></td>
                         <td>
                             <button class="btn btn-primary btn-sm check-btn">Check</button>
                             <button class="btn btn-danger btn-sm remove-row" disabled>Remove</button>
@@ -88,13 +103,15 @@
             </div>
         </div>
         
-        <!-- <div id="mynetwork"></div> -->
+        <div id="pertChart"></div>
     </div>
     <!-- Bootstrap 5 JS -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <script src="../../methods/oa/table.js"></script>
-    <script src="../../methods/oa/oa.js"></script>
+    <script src="../../methods/common/networkManager.js"></script>
+    <script src="../../methods/common/keystrokes.js"></script>
+    <script src="../../methods/pert/table.js"></script>
+    <script src="../../methods/pert/pert.js"></script>
 </body>
 </html>

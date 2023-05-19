@@ -5,7 +5,7 @@ $(document).ready(function() {
     var textarea = $("#textarea");
 
     // ...
-
+    
     // Highlight button click event
     $(document).on("click", "#highlightBtn", function() {
         tableData = []; // Clear table data
