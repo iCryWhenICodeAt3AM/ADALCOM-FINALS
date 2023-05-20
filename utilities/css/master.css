@@ -16,6 +16,9 @@ body{
   background-color: rgba(15, 13, 14, 0.964);
   color: rgb(223, 223, 223);
 }
+#pertChart{
+  height: 200px;
+}
 #mynetwork{
   width: 980px;
   height: 600px;
@@ -43,4 +46,7 @@ th{
 }
 .error {
   background-color: #FFCCCC;
+}
+tr{
+  color: white;
 }

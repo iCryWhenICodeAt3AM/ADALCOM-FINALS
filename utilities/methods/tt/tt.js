@@ -51,22 +51,9 @@ function printMatrix(adjacencyList) {
 async function createNetwork() {
   networkManager.createNetwork("mynetwork");
   
-  const nodes = [
-    { id: 1, label: "A" },
-    { id: 2, label: "B" },
-    { id: 3, label: "C" },
-    { id: 4, label: "D" },
-    { id: 5, label: "E" }
-  ];
+  const nodes = [];
   
-  const edges = [
-    { from: 1, to: 2, label: "20" },
-    { from: 2, to: 3, label: "30" },
-    { from: 3, to: 4, label: "10" },
-    { from: 4, to: 2, label: "50" },
-    { from: 4, to: 5, label: "10" },
-    { from: 5, to: 1, label: "25" }
-  ];
+  const edges = [];
   
   nodes.forEach(node => networkManager.addNode(node));
   edges.forEach(edge => networkManager.addEdge(edge));
