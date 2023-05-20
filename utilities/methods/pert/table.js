@@ -5,33 +5,33 @@ $(document).ready(function() {
   $(document).on("click", ".check-btn", function() {
 
     var row = $(this).closest("tr");
-    var objectCode = row.find(".object-code").val();
-    var profit = row.find(".profit").val();
-    var weight = row.find(".weight").val();
+    var code = row.find(".code").val();
+    var pred = row.find(".pred").val();
+    var et = row.find(".et").val();
     var isValid = true;
 
     // Validate Object Code
-    if (!isValidObjectCode(objectCode)) {
-      row.find(".object-code").addClass("error");
+    if (!isValidObjectCode(code)) {
+      row.find(".code").addClass("error");
       isValid = false;
     } else {
-      row.find(".object-code").removeClass("error");
+      row.find(".code").removeClass("error");
     }
 
-    // Validate Profit
-    if (!isValidNumber(profit)) {
-      row.find(".profit").addClass("error");
+    // Validate pred
+    if (!isValidPred(pred)) {
+      row.find(".pred").addClass("error");
       isValid = false;
     } else {
-      row.find(".profit").removeClass("error");
+      row.find(".pred").removeClass("error");
     }
 
-    // Validate Weight
-    if (!isValidNumber(weight)) {
-      row.find(".weight").addClass("error");
+    // Validate et
+    if (!isValidNumber(et)) {
+      row.find(".et").addClass("error");
       isValid = false;
     } else {
-      row.find(".weight").removeClass("error");
+      row.find(".et").removeClass("error");
     }
 
     if (isValid || isValid && isEditing) {
@@ -43,9 +43,9 @@ $(document).ready(function() {
       if (!isEditing) {
           // Add a new row
           var newRow = '<tr>' +
-            '<td><input type="text" class="form-control object-code" required></td>' +
-            '<td><input type="number" class="form-control profit" required></td>' +
-            '<td><input type="number" class="form-control weight" required></td>' +
+            '<td><input type="text" class="form-control code" required></td>' +
+            '<td><input type="text" class="form-control pred" required></td>' +
+            '<td><input type="number" class="form-control et" required></td>' +
             '<td>' +
             '<button class="btn btn-primary btn-sm check-btn">Check</button>' +
             '<button class="btn btn-danger btn-sm remove-row">Remove</button>' +
@@ -104,23 +104,21 @@ $(document).ready(function() {
   });
 
 
-  
-
   function isValidObjectCode(objectCode) {
     // Check if the object code is empty
     if (objectCode.trim() === '') {
       return false;
     }
-
+  
     // Validate Object Code (letters only)
     var letters = /^[A-Za-z]+$/;
     if (!objectCode.match(letters)) {
       return false;
     }
-
+  
     // Check for duplicates
     var existingCodes = [];
-    $('.object-code').each(function() {
+    $('.code').each(function() {
       existingCodes.push($(this).val());
     });
     var count = 0;
@@ -132,8 +130,19 @@ $(document).ready(function() {
     if (count > 1) {
       return false;
     }
-
+  
     return true;
+  }
+  
+  function isValidPred(pred) {
+    // Check if the pred is empty
+    if (pred.trim() === '') {
+      return true; // Accept empty pred
+    }
+  
+    // Validate Pred (letters, spaces, and commas only)
+    var letters = /^[A-Za-z, ]+$/;
+    return pred.match(letters);
   }
 
   function isValidNumber(value) {
