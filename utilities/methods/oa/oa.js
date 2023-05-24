@@ -70,7 +70,7 @@ $(document).ready(function() {
             // Update the textarea with the results
             textarea.val(textarea.val() + "\n");
             textarea.val(textarea.val() + "Weight Restriction: " + weightRestriction.toFixed(2) + "\n\n");
-            textarea.val(textarea.val() + "Selection Cost:\n");
+            textarea.val(textarea.val() + "Selection Profits:\n");
             totalPriceArray.forEach(function(row) {
                 var code = row.code;
                 var selectedRow = tableData.find(function(data) {
@@ -79,7 +79,7 @@ $(document).ready(function() {
                 textarea.val(textarea.val() + "Code: " + code + " -> Portion: " + (selectedRow ? selectedRow.selection: '') + ", Profit Per Weight: " + (selectedRow ? selectedRow.profitPerWeight : '')  + ", Total Cost: " + row.totalPrice + "\n");
             });
             textarea.val(textarea.val() + "\n");
-            textarea.val(textarea.val() + "Overall Cost: " + totalPriceTotal.toFixed(2));
+            textarea.val(textarea.val() + "Overall Profit: " + totalPriceTotal.toFixed(2));
         }
     });
 });
