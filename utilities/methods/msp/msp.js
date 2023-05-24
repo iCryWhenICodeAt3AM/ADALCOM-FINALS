@@ -77,7 +77,7 @@ function kruskalAlgorithm(network){
             // if the nodes have different parents, add the edge to the minimum spanning tree
             if (parentFrom !== parentTo && !isConnected(parentFrom, parentTo, mstEdges)) {
                 var mstEdge = Object.assign({}, edgesArray[i], { parent: { from: parentFrom, to: parentTo } });
-                mstEdges.add(mstEdge);
+                mstEdges.add(mstEdge);  
                 // update the parent of the smaller tree to the parent of the larger tree
                 if (parentFrom < parentTo) {
                     parent[parentTo] = parentFrom;
