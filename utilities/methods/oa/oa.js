@@ -51,16 +51,17 @@ $(document).ready(function() {
                         totalPrice: (parseFloat(tableData[i].profit) * tableData[i].selection).toFixed(2)
                     });
                     remainingWeight -= currentWeight;
-                } else {
-                    var fractionWeight = remainingWeight / currentWeight;
-                    tableData[i].selection = fractionWeight;
-                    totalPriceArray.push({
-                        code: tableData[i].code,
-                        totalPrice: (parseFloat(tableData[i].profit) * tableData[i].selection).toFixed(2)
-                    });
-                    remainingWeight = 0;
-                    break;
-                }
+                } 
+//                 else {
+//                     var fractionWeight = remainingWeight / currentWeight;
+//                     tableData[i].selection = fractionWeight;
+//                     totalPriceArray.push({
+//                         code: tableData[i].code,
+//                         totalPrice: (parseFloat(tableData[i].profit) * tableData[i].selection).toFixed(2)
+//                     });
+//                     remainingWeight = 0;
+//                     break;
+//                 }
             }
 
             var totalPriceTotal = totalPriceArray.reduce(function(total, item) {
